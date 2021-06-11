@@ -1,0 +1,27 @@
+{
+  "name": "ps5-stock-checker",
+  "version": "1.0.0",
+  "description": "Checks various retailers for PS5 stock and notifies you when something appears to be available",
+  "main": "src/index.ts",
+  "scripts": {
+    "check": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bockensm/ps5-stock-checker.git"
+  },
+  "author": "Mark Bockenstedt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bockensm/ps5-stock-checker/issues"
+  },
+  "homepage": "https://github.com/bockensm/ps5-stock-checker#readme",
+  "dependencies": {
+    "@types/node": "^15.12.2",
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
+    "node-cron": "^3.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}
