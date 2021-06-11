@@ -1,5 +1,6 @@
 import axios from "axios"
 import cheerio from "cheerio"
+import sendNotification from "../notifications"
 
 export default class Retailer {
     retailer: string
@@ -45,9 +46,7 @@ export default class Retailer {
     }
 
     sendStockAlert(): void {
-        console.log( `!!! ${ this.retailer } appears to have a PS5 in stock !!!` )
-        console.log( this.url )
-
-        // TODO: Send an urgent alert somehow
+        const message = `${ this.retailer } appears to have a PS5 in stock\n${ this.url }`
+        sendNotification( message )
     }
 }

@@ -3,6 +3,7 @@ import BestBuy from "./retailers/BestBuy"
 import GameStop from "./retailers/GameStop"
 import Target from "./retailers/Target"
 // import Amazon from "./retailers/Amazon"
+import sendNotification from "./notifications"
 
 async function run() {
     await new GameStop().check()
@@ -14,4 +15,10 @@ async function run() {
     axios.get( "https://hc-ping.com/02aef50d-48b3-4682-8b74-6b9c227eba50" )
 }
 
+async function notificationTest() {
+    await sendNotification( "test 3" )
+}
+
 run()
+// notificationTest()
+process.exit()
