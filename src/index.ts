@@ -6,7 +6,6 @@ Sentry.init( {
 } )
 
 import axios from "axios"
-import * as cron from "node-cron"
 import BestBuy from "./retailers/BestBuy"
 import GameStop from "./retailers/GameStop"
 import Target from "./retailers/Target"
@@ -22,4 +21,4 @@ async function run() {
     axios.get( "https://hc-ping.com/02aef50d-48b3-4682-8b74-6b9c227eba50" )
 }
 
-cron.schedule( "*/5 * * * *", run )
+run()
