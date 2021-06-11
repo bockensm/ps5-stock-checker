@@ -9,6 +9,9 @@ async function run() {
     await new BestBuy().check()
     await new Target().check()
     // new Amazon().check()
+
+    console.log( "Sending HealthCheck ping" )
+    axios.get( "https://hc-ping.com/02aef50d-48b3-4682-8b74-6b9c227eba50" )
 }
 
 run()
