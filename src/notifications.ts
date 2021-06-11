@@ -11,4 +11,5 @@ export default function ( message: string ) {
     const chatId = process.env.TELEGRAM_CHAT_ID
 
     bot.sendMessage( chatId, message )
+    process.exit()
 }
